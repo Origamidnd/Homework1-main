@@ -1,77 +1,66 @@
 // Задание 1
-const people = [
-    { name: 'Глеб', age: 29 },
-    { name: 'Анна', age: 17 },
-    { name: 'Олег', age: 7 },
-    { name: 'Оксана', age: 47 }
- ];
- 
- console.log(people.sort((a, b) => a.age - b.age));
+const title = document.querySelector("#main-title");
+const button = document.querySelector("#toggle-btn");
 
-// Задание 2
-function isPositive(num) {
-    return num > 0;
-}
-
-function isMale(person) {
-    return person.gender === 'male';
-}
-
-function filter(array, ruleFunction) {
-    const result = [];
-    
-    for (let i = 0; i < array.length; i++) {
-        if (ruleFunction(array[i])) {
-            result.push(array[i]);
-        }
-    }
-    
-    return result;
-}
-
-console.log(filter([3, -4, 1, 9], isPositive)); // [3, 1, 9]
- 
-const people = [
-   {name: 'Глеб', gender: 'male'},
-   {name: 'Анна', gender: 'female'},
-   {name: 'Олег', gender: 'male'},
-   {name: 'Оксана', gender: 'female'}
-];
-
-console.log(filter(people, isMale));
-
-// Задание 3
-const intervalId = setInterval(() => {
-    console.log(new Date());
-}, 3000);
-
-setTimeout(() => {
-    clearInterval(intervalId);
-    console.log('30 секунд прошло');
-}, 30000);
-
-
-// Задание 4
-function delayForSecond(callback) {
-    setTimeout(callback, 1000);
-}
-
-delayForSecond(function () {
-   console.log('Привет, Глеб!');
+button.addEventListener("click", () => {
+  if (title.style.display === "none") {
+    title.style.display = "block";
+    button.textContent = "Скрыть";
+  } else {
+    title.style.display = "none";
+    button.textContent = "Показать";
+  }
 });
 
 
+// Задание 2
+const text = document.querySelector("#my-text");
+const button_two = document.querySelector("#color-btn");
+
+button_two.addEventListener("click", () => {
+  text.style.color = "blue";
+});
+
+// Задание 3
+const title_two = document.querySelector("#main-title_two");
+const changeTextBtn = document.querySelector("#change-text-btn");
+
+changeTextBtn.addEventListener("click", () => {
+  title_two.textContent = "Привет, мир!";
+});
+
+// Задание 4
+const descriptions = document.querySelectorAll(".description");
+
+descriptions.forEach(el => {
+  el.textContent = "Измененный текст";
+});
+
 // Задание 5
-function delayForSecond(cb) {
-    setTimeout(() => {
-        console.log('Прошла одна секунда');
-        if(cb) { cb(); }
-    }, 1000)
-}
+const descriptions1 = document.querySelectorAll(".description1");
+
+descriptions1.forEach(element => {
+  element.textContent = "Новый текст";
+});
+
+// Задание 6
+const addBtn = document.querySelector("#add-btn");
+
+addBtn.addEventListener("click", () => {
+  const newParagraph = document.createElement("p");
+  newParagraph.textContent = "Новый абзац";
+
+  document.body.appendChild(newParagraph);
+});
 
 
-function sayHi (name) {
-    console.log(`Привет, ${name}!`);
-}
+// Задание 7
+const deleteBtn = document.querySelector("#delete-btn");
 
-delayForSecond(() => sayHi('Глеб'));
+deleteBtn.addEventListener("click", () => {
+  const firstDescription = document.querySelector(".description-three");
+  
+  if (firstDescription) {
+    firstDescription.remove();
+  }
+});
