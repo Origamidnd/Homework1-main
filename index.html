@@ -25,12 +25,18 @@
         </p>
         <a href="#about-games" class="intro-button ml-119">Поехали!</a>
       </div>
-      <div class="bottom-line">
-        <div class="bottom-line__games">ВИКТОРИНА</div>
-        <div class="bottom-line__games">УГАДАЙ ЧИСЛО</div>
-        <div class="bottom-line__games">ПЕРЕВЕРНИ ТЕКСТ</div>
-        <div class="bottom-line__games">ПРОСТАЯ АРИФМЕТИКА</div>
-      </div>
+<div class="bottom-line">
+  <div class="bottom-line__wrapper">
+    <div class="bottom-line__games">ВИКТОРИНА</div>
+    <div class="bottom-line__games">УГАДАЙ ЧИСЛО</div>
+    <div class="bottom-line__games">ПЕРЕВЕРНИ ТЕКСТ</div>
+    <div class="bottom-line__games">ПРОСТАЯ АРИФМЕТИКА</div>
+    <div class="bottom-line__games">ВИКТОРИНА</div>
+    <div class="bottom-line__games">УГАДАЙ ЧИСЛО</div>
+    <div class="bottom-line__games">ПЕРЕВЕРНИ ТЕКСТ</div>
+    <div class="bottom-line__games">ПРОСТАЯ АРИФМЕТИКА</div>
+  </div>
+</div>
     </header>
 
     <!--Блок "Об играх" -->
@@ -144,14 +150,14 @@
 
     <!-- Карточка 2 -->
     <div class="game-card game-card--reversed" id="game2">
-      <img class="game-card__img" src="img/game2.png" alt="game" />
       <div class="game-card__content">
         <h3 class="game-card__title">Простая арифметика</h3>
         <p class="game-card__description">
           Решай примеры на сложение, вычитание, умножение и деление
         </p>
-        <button class="game-card__button">Играть!</button>
+        <button class="game-card__button" onclick="startMathGame()">Играть!</button>
       </div>
+       <img class="game-card__img" src="img/game2.png" alt="game" />
     </div>
 
     <!-- Карточка 3 -->
@@ -161,21 +167,21 @@
         <p class="game-card__description">
           Введи текст и получи его в обратном порядке
         </p>
-        <button class="game-card__button">Играть!</button>
+        <button class="game-card__button" onclick="startReverseTextGame()">Играть!</button>
       </div>
       <img class="game-card__img" src="img/game3.png" alt="game" />
     </div>
 
     <!-- Карточка 4 -->
     <div class="game-card game-card--reversed" id="game4">
-      <img class="game-card__img" src="img/game5.png" alt="game" />
       <div class="game-card__content">
         <h3 class="game-card__title">Викторина</h3>
         <p class="game-card__description">
           Проверь свои знания в разных областях
         </p>
-        <button class="game-card__button">Играть!</button>
+        <button class="game-card__button" onclick="startQuizGame()">Играть!</button>
       </div>
+            <img class="game-card__img" src="img/game5.png" alt="game" />
     </div>
 
     <!-- Карточка 5 -->
@@ -185,22 +191,22 @@
         <p class="game-card__description">
           Сыграй в классическую игру против компьютера
         </p>
-        <button class="game-card__button">Играть!</button>
+        <button class="game-card__button" onclick="playRockPaperScissors()">Играть!</button>
       </div>
       <img class="game-card__img" src="img/game4.png" alt="game" onclick="playGameRockPaperScissors()" />
     </div>
 
     <!-- Карточка 6 -->
     <div class="game-card game-card--reversed" id="game6">
-      <img class="game-card__img" src="img/game6.png" alt="game" />
       <div class="game-card__content">
-        <h3 class="game-card__title">Генератор случайных чисел</h3>
+        <h3 class="game-card__title">Генератор случайного цвета</h3>
         <p class="game-card__description">
           Игра, в которой при клике на кнопку фон страницы меняется на
           случайный.
         </p>
-        <button class="game-card__button">Играть!</button>
+        <button class="game-card__button" onclick="startRandomColorGame() ">Играть!</button>
       </div>
+          <img class="game-card__img" src="img/game6.png" alt="game" />
     </div>
   </div>
 </section>
